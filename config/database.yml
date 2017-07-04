@@ -1,0 +1,9 @@
+development: &development
+  adapter: postgresql
+  encoding: unicode
+  database: rubygems
+  pool: 100
+  username: gdlk
+  password: 44b
+  host: localhost
+  min_messages: WARNING

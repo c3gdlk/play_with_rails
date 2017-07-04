@@ -1,0 +1,10 @@
+<h1>Total count: <%= @sites.count %></h1>
+
+<table width="100%" border="1|0">
+  <% @sites.each do |(site, email)| %>
+    <tr>
+      <td><%= site%></td>
+      <td><%= email%></td>
+    </tr>
+  <% end %>
+</table>

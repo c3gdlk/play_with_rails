@@ -1,0 +1,6 @@
+= link_to 'New Room', new_hotel_room_path(hotel)
+%ul
+- @rooms.each do |room|
+  %li
+    = link_to room.title, edit_hotel_room_path(hotel, room)    
+    = link_to 'Delete', hotel_room_path(hotel, room), method: :delete, data: {confirm: 'You sure?'}

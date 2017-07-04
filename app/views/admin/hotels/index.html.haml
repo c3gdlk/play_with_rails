@@ -1,0 +1,13 @@
+%h1 Hi
+.some-class#my-id 
+  DDDd
+  = 'aaaa'
+  = link_to 'New Hotel', new_admin_hotel_path
+  %ul
+    - @hotels.each do |hotel|
+      %li
+        = link_to hotel.title, edit_admin_hotel_path(hotel)    
+        = link_to 'Delete', admin_hotel_path(hotel), method: :delete, data: {confirm: 'You sure?'}
+        = link_to 'Rooms', admin_hotel_rooms_path(hotel)
+
+  = paginate @hotels      

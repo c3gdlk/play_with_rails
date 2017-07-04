@@ -1,0 +1,20 @@
+---
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:concurrency:  50
+:queues:
+  - [default, 5]
+  - [sites, 10]
+  - [emails, 10]
+
+:limits:
+  elasticsearch: 1
+
+development:
+  :namespace: im5_development
+staging:
+  :namespace: im5_staging
+production:
+  :namespace: im5_production
+undev:
+  :namespace: im5_undev

@@ -1,0 +1,9 @@
+<%= simple_form_for post do |f|%>
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
+  <%= image_tag post.picture if post.picture.present? %>
+
+  <%= f.submit :save %>
+<% end %>
